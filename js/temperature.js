@@ -6,9 +6,13 @@
 // KELVINTEMP * 9/5 - 459.67
 
 
-function convert() {
-  var farenheit = kelvin.value * 9/5 - 459.67;
-  var Celsius = kelvin.value - 273.15;
-  return farenheit/Celsius
-
+function toCelsius(kelvin) {
+    return Math.floor(kelvin - 273.15);
 }
+
+function toFarenheit(kelvin) {
+    return Math.floor(kelvin * (9/5) - 459.67);
+}
+
+exports.toCelsius = toCelsius;
+exports.toFarenheit = toFarenheit;
